@@ -1,0 +1,4 @@
+let apply = fn (a, b) => { a(b) };
+let one = apply(fn (x) => { x + "Bla" }, 3);
+let two = apply(fn (x) => { x + "Bla" }, "Oi");
+print(two)
