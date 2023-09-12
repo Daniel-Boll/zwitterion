@@ -8,5 +8,5 @@ fn main() {
     .parse(&mut errors, "assets/test.rinha", &input)
     .unwrap();
 
-  interpreter::interpret_from_ast(ast.expression);
+  interpreter::from_ast(ast.expression, &mut std::io::stdout());
 }

@@ -1,0 +1,6 @@
+---
+source: tests/rinha.rs
+expression: output
+---
+"Expected tuple\n"
+

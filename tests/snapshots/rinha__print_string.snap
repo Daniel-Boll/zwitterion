@@ -1,0 +1,6 @@
+---
+source: tests/rinha.rs
+expression: "interpret_from(r#\"print(\"Hello, world\")\"#)"
+---
+"Hello, world\n"
+

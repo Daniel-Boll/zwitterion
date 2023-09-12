@@ -1,0 +1,6 @@
+---
+source: tests/rinha.rs
+expression: "interpret_from(r#\"\n  let sum = fn(a, b) => { a + b };\n  print(sum(1, 2))\n  \"#)"
+---
+"3\n"
+

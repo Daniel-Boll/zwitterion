@@ -1,0 +1,6 @@
+---
+source: tests/rinha.rs
+expression: "interpret_from(r#\"\n  print((fn(a, b) => { a + b })(1, 2))\n  \"#)"
+---
+"3\n"
+
