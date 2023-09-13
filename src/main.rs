@@ -1,5 +1,5 @@
 use rinha::rinha;
-use rinha_de_compiler::interpreter;
+use zwitterion::interpreter;
 
 fn main() {
   let mut errors = vec![];

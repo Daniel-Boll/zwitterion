@@ -1,4 +1,4 @@
-use rinha_de_compiler::utils::interpret_to_buffer;
+use zwitterion::utils::interpret_to_buffer;
 
 #[test]
 fn print_number() {
