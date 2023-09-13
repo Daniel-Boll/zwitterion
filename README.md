@@ -3,7 +3,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Welcome to **Zwitterion**, a specialized language interpreter implemented in Rust. This project is part of the [Rinha de Compiler](https://github.com/aripiprazole/rinha-de-compiler) event. Named after _"zwitterions,"_ molecules that maintain both positive and negative charges while being overall neutral, **Zwitterion** aims to strike a similar balance of robust functionality and high performance in the world of language interpretation. As of now, it serves as a tree-walking parser, with future plans to implement advanced compiler optimizations.
+Welcome to **Zwitterion**, a specialized language interpreter implemented in Rust. This project is part of the [Rinha de Compiler](https://github.com/aripiprazole/rinha-de-compiler) event. Named after _"zwitterions"_, molecules that maintain both positive and negative charges while being overall neutral, **Zwitterion** aims to strike a similar balance of robust functionality and high performance in the world of language interpretation. As of now, it serves as a tree-walking parser, with future plans to implement advanced compiler optimizations.
 
 ## Installation
 
