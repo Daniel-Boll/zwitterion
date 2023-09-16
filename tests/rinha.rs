@@ -11,6 +11,26 @@ fn print_string() {
 }
 
 #[test]
+fn define_variable() {
+  insta::assert_yaml_snapshot!(interpret_to_buffer(
+    r#"
+  let a = 1;
+  print(a)
+  "#
+  ));
+}
+
+#[test]
+fn print_twice() {
+  insta::assert_yaml_snapshot!(interpret_to_buffer(
+    r#"
+  let a = 1;
+  print(print(a))
+  "#
+  ));
+}
+
+#[test]
 fn sum() {
   insta::assert_yaml_snapshot!(interpret_to_buffer(
     r#"
@@ -24,6 +44,41 @@ fn sum() {
   print((fn(a, b) => { a + b })(1, 2))
   "#
   ));
+}
+
+#[test]
+fn declare_tuple() {
+  insta::assert_yaml_snapshot!(interpret_to_buffer(
+    r#"
+  let tuple = (1, 2);
+  print(tuple)
+  "#
+  ));
+}
+
+#[test]
+fn tuple_first() {
+  insta::assert_yaml_snapshot!(interpret_to_buffer(
+    r#"
+  let tuple = (1, 2);
+  print(first(tuple))
+  "#
+  ));
+}
+
+#[test]
+fn tuple_second() {
+  insta::assert_yaml_snapshot!(interpret_to_buffer(
+    r#"
+  let tuple = (1, 2);
+  print(second(tuple))
+  "#
+  ));
+}
+
+#[test]
+fn tuple_first_fail() {
+  insta::assert_yaml_snapshot!(interpret_to_buffer(r#"print(first(true))"#));
 }
 
 #[test]

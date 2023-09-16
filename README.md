@@ -31,13 +31,13 @@ Welcome to **Zwitterion**, a specialized language interpreter implemented in Rus
 To run **Zwitterion**, execute:
 
 ```bash
-cargo run # Or if you have `just` you can `just run`
+cargo run -- {{filepath}} # Or if you have `just` you can `just run {{filepath}}`
 ```
 
 ## Roadmap
 
 - [x] Tree-Walking Parser
-- [ ] Symbol Table and Scope Management
+- [x] Symbol Table and Scope Management
 - [ ] AST Optimization [[lalrpop](https://github.com/lalrpop/lalrpop) + [logos](https://github.com/maciejhirsz/logos) combo]
 - [ ] Intermediate Representation
 - [ ] Compilation via Cranelift (Future Goal)

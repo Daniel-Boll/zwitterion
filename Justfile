@@ -1,7 +1,7 @@
 alias r := run
 
-run:
-  cargo r --release
+run file:
+  cargo r --release -- {{file}}
 
 test:
   cargo nextest run || cargo insta review

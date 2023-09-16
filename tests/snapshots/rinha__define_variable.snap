@@ -1,0 +1,6 @@
+---
+source: tests/rinha.rs
+expression: "interpret_to_buffer(r#\"\n  let a = 1;\n  print(a)\n  \"#)"
+---
+"1\n"
+
