@@ -4,11 +4,7 @@ use super::{AnonymousFunction, Value};
 
 impl std::fmt::Debug for AnonymousFunction {
   fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-    writeln!(f, "<#closure> Env {{")?;
-    for (name, value) in self.env.values.iter() {
-      writeln!(f, "  {} = {}", name, value)?;
-    }
-    write!(f, "}}")
+    write!(f, "<#closure>")
   }
 }
 

@@ -20,21 +20,28 @@ pub enum Value {
 pub struct AnonymousFunction {
   pub parameters: Vec<parser::Var>,
   pub body: Box<ast::Term>,
-  pub env: env::Env,
 }
 
 impl AnonymousFunction {
-  pub fn new(parameters: Vec<parser::Var>, body: Box<ast::Term>, env: env::Env) -> Self {
+  pub fn new(parameters: Vec<parser::Var>, body: Box<ast::Term>) -> Self {
+    Self { parameters, body }
+  }
+}
+
+pub(crate) struct Interpreter<W: Write> {
+  env: env::Env,
+  writer: W,
+}
+
+impl<W: Write> Interpreter<W> {
+  pub(crate) fn new(writer: W) -> Self {
     Self {
-      parameters,
-      body,
-      env,
+      env: env::Env::default(),
+      writer,
     }
   }
 }
 
-pub fn from_ast<W: Write>(term: ast::Term, mut writer: W) {
-  let mut env = env::Env::default();
-
-  eval::eval(term, &mut env, &mut writer);
+pub fn from_ast<W: Write>(term: ast::Term, writer: W) {
+  Interpreter::new(writer).eval(term);
 }
